@@ -1,6 +1,6 @@
 ﻿// Type: CSharpFeatures.CSharp8FeaturesDemo 
 // Assembly: CSharpFeatures, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 7C473163-C8E1-4E39-ACC7-196DF63E3161
+// MVID: 2388B91F-2D9A-4138-88DB-12581FA9486A
 // Location: E:\projects\mine\CSharp8.0\CSharp8Features\bin\Release\netcoreapp3.1\CSharpFeatures.dll
 // Sequence point data from E:\projects\mine\CSharp8.0\CSharp8Features\bin\Release\netcoreapp3.1\CSharpFeatures.pdb
 
@@ -91,9 +91,11 @@
     .method public hidebysig specialname instance float64
       get_Distance() cil managed
     {
+      .custom instance void [System.Runtime]System.Runtime.CompilerServices.IsReadOnlyAttribute::.ctor()
+        = (01 00 00 00 )
       .maxstack 8
 
-      // [12 39 - 12 63]
+      // [12 48 - 12 72]
       IL_0000: ldarg.0      // this
       IL_0001: call         instance float64 CSharpFeatures.CSharp8FeaturesDemo/Point::get_X()
       IL_0006: ldarg.0      // this
@@ -115,10 +117,7 @@
     {
       .custom instance void [System.Runtime]System.Runtime.CompilerServices.IsReadOnlyAttribute::.ctor()
         = (01 00 00 00 )
-      .maxstack 4
-      .locals init (
-        [0] valuetype CSharpFeatures.CSharp8FeaturesDemo/Point V_0
-      )
+      .maxstack 8
 
       // [13 59 - 13 102]
       IL_0000: ldstr        "({0}, {1}) is {2} from the origin"
@@ -129,13 +128,10 @@
       IL_0011: call         instance float64 CSharpFeatures.CSharp8FeaturesDemo/Point::get_Y()
       IL_0016: box          [System.Runtime]System.Double
       IL_001b: ldarg.0      // this
-      IL_001c: ldobj        CSharpFeatures.CSharp8FeaturesDemo/Point
-      IL_0021: stloc.0      // V_0
-      IL_0022: ldloca.s     V_0
-      IL_0024: call         instance float64 CSharpFeatures.CSharp8FeaturesDemo/Point::get_Distance()
-      IL_0029: box          [System.Runtime]System.Double
-      IL_002e: call         string [System.Runtime]System.String::Format(string, object, object, object)
-      IL_0033: ret
+      IL_001c: call         instance float64 CSharpFeatures.CSharp8FeaturesDemo/Point::get_Distance()
+      IL_0021: box          [System.Runtime]System.Double
+      IL_0026: call         string [System.Runtime]System.String::Format(string, object, object, object)
+      IL_002b: ret
 
     } // end of method Point::ToString
 
